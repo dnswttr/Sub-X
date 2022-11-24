@@ -79,9 +79,13 @@
 import subX
 
 
-fname = 'MK_5'
-path = './'
-opath = './'
+fname = ..
+path = ..
+opath = ..
+rmask = ..
+mlim = ..
+layer = ..
+sigin = ..
 subX.subX(fname, path, opath, rmask = fname)
 
 
