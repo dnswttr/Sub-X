@@ -17,6 +17,12 @@
 #	 - rmask: name of the file that contains the regions to which the 
 #			  computation is restricted (must have been produced with ds9)
 #			  without ".reg", eg: region.reg -> rmask = "region"
+#			  For 3D data, the region mask is the convolution of 3 separate 
+#			  region files, i.e. you have a cube with coordinates x,y,z. then 
+#			  you define a) regz.reg, which is the region mask in the xy plane,
+#			  b) regy.reg, which is the region mask in the xz plane and 
+#			  c) regx.reg, which is the region mask in the yz plane. 
+#			  Then you pass rmask = ['regz', 'regy', 'regx'] to the function. 
 #			  default: "none"
 #
 #	 - mlim: set a minimum threshold by hand instead of computing

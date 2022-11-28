@@ -76,7 +76,11 @@ def reg_mask(head1,path, rmask, dims):
 			r = pyreg.open(path + rmask + '.reg').as_imagecoord(head1)
 			mask = r.get_mask(shape=(dims[0], dims[1]))
 		else: 
-			print('No region file was found \n continue withour region mask')
+			print('No region file was found \n now you have two options:')
+			print('1) provide the file of the region mask')
+			print('2) do not pass rmask to the subX function')
+			print('Good Bye')
+			exit()
 
 	else:
 		if (np.size(rmask) == 3) & (np.size(dims) == 3) :
